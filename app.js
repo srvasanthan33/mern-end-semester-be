@@ -4,6 +4,9 @@ const app = express()
 const PORT = 3500
 const patientsRouter = require('./routes/patientsRoute')
 const mongoose = require('mongoose')
+const cors = require('cors')
+
+app.use(cors())
 
 app.get('/',(request,response) =>{
     response.send("You have reached server ")
